@@ -1,6 +1,6 @@
-const React = require("react");
+// const React = require("react");
 
-module.exports = function CategoryCard({ category }) {
-  return (
-  );
-};
+// module.exports = function CategoryCard({ category }) {
+//   return (
+//   );
+// };
