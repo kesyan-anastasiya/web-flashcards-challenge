@@ -5,14 +5,13 @@ const authRouter = require('./views/auth.routes');
 
 const apiAuthRouter = require('./api/api.auth.routes');
 // const apiTwitsRouter = require('./api/api.categories.routes')
-const finalRouter = require('./views/final.routes')
+// const usersRouter = require('./views/users.routes')
 
 
-
-// router.use('/', homeRouter)
-// router.use('/auth', authRouter)
+router.use('/', mainRouter);
+router.use('/auth', authRouter);
 // router.use('/twits', twitsRouter)
-router.use('/final', finalRouter)
+// router.use('/users', usersRouter)
 
 router.use('/api/auth', apiAuthRouter);
 // router.use('/api/twits', apiTwitsRouter)
