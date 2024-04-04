@@ -9,7 +9,7 @@ module.exports = function Layout({ title, children }) {
         <link rel="stylesheet" href="/styles/style.css" />
       </head>
       <body>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <body>{children}</body>
       </body>
     </html>
