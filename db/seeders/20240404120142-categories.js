@@ -5,11 +5,11 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     const categoriesData = [
       {
-        name: "1",
+        title: "1",
         img:"rrr",
       },
       {
-        name: "2",
+        title: "2",
         img:"yyy",
       },
     ];
