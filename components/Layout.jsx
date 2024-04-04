@@ -10,7 +10,7 @@ module.exports = function Layout({ title, children }) {
         <script defer src='/scripts/auth.js' />
       </head>
       <body>
-        <NavBar />
+        <NavBar/>
         <body>{children}</body>
       </body>
     </html>
