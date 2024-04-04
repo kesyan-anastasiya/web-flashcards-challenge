@@ -1,6 +1,6 @@
 const React = require("react");
 
-module.exports = function QuestionCard({ question}) {
+module.exports = function QuestionCard({ question }) {
   return (
     <div className='questionCard' data-id={question.id}>
       <h2>{question.img}</h2>
