@@ -1,5 +1,5 @@
 const router = require('express').Router()
-// const homeRouter = require('./views/home.routes')
+const mainRouter = require('./views/main.routes');
 // const authRouter = require('./views/auth.routes')
 // const twitsRouter = require('./views/twits.routes')
 
@@ -8,7 +8,7 @@ const router = require('express').Router()
 // const usersRouter = require('./views/users.routes')
 
 
-// router.use('/', homeRouter)
+router.use('/', mainRouter);
 // router.use('/auth', authRouter)
 // router.use('/twits', twitsRouter)
 // router.use('/users', usersRouter)

@@ -1,5 +1,5 @@
 const React = require("react");
-const NavBar = require("./ui/NavBar");
+// const NavBar = require("./ui/NavBar");
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -9,7 +9,7 @@ module.exports = function Layout({ title, children }) {
         <link rel="stylesheet" href="/styles/style.css" />
       </head>
       <body>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <body>{children}</body>
       </body>
     </html>
