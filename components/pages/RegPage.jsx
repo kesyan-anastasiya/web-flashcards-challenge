@@ -24,12 +24,12 @@ function RegPage() {
             id='exampleInputPassword1'
             placeholder='Введите пароль'
           />
-          <input
+          {/* <input
             name='password'
             className='form-control'
             id='exampleInputPassword2'
             placeholder='Повторите пароль'
-          />
+          /> */}
           <button type='submit' className='btn btn-primary'>
             Зарегистрироваться
           </button>
