@@ -1,5 +1,5 @@
 const React = require("react");
-// const NavBar = require("./ui/NavBar");
+const NavBar = require("./ui/NavBar");
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -10,7 +10,7 @@ module.exports = function Layout({ title, children }) {
         <script defer src='/scripts/auth.js' />
       </head>
       <body>
-        <NavBar />
+        <NavBar/>
         <body>{children}</body>
       </body>
     </html>
