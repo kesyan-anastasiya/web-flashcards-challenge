@@ -13,10 +13,10 @@ function LogPage() {
             placeholder='Введите имя'
           />
           <input
-            name='name'
+            name='email'
             className='form-control'
-            id='exampleInputEmail1'
-            placeholder='Введите Имя'
+            id='exampleInputEmail'
+            placeholder=' Введите email'
           />
           <input
             name='password'
