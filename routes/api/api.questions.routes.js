@@ -9,13 +9,15 @@ router.post('/', async (req, res) => {
         } else {
             const { user } = res.app.locals;
             const question = await Question.findOne({ where: { id: questionId } })
+        
             if (question.answer === answer) {
-                res.json({ message: "Ну каков умничка!!"})
+                res.status(200).json({ message: "Умница! Мама с папой гордятся тобой!"})
             } else {
-                res.json({ message: 'Не, там все не так'})
+                res.status(400).json({ message: `Не, там все не так, а так "${question.answer}"`})
             }
         }
     } catch ({ message }) {
+    
         res.status(500).json({ message })
     }
 })

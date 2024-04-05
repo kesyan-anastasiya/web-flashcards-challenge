@@ -1,5 +1,6 @@
 require('@babel/register');
 const express = require('express')
+const morgan = require('morgan')
 
 const app = express();
 const path = require('path');
@@ -7,6 +8,7 @@ const path = require('path');
 const indexRouter = require('./routes/index.routes')
 const ssr = require('./middleware/ssr');
 
+app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: 'true' }));
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')));
