@@ -4,7 +4,7 @@ const Layout = require("../Layout");
 module.exports = function MainPage({ title, user}) {
   return (
     <Layout title={title} user={user}>
-            <div>
+            <div className='mainConteiner'>
                 <h2>Привет,</h2>
                 <a className='btnStart' href='/categories'>
             Начать квиз
