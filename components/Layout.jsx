@@ -9,10 +9,11 @@ module.exports = function Layout({ title, children, user }) {
         <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="/styles/Navbar.css" />
         <link rel="stylesheet" href="/styles/Auth.css" />
-        <script defer src='/scripts/auth.js' />
+        <script defer src="/scripts/auth.js" />
+        <script defer src="/scripts/add.js" />
       </head>
       <body>
-        <NavBar user={user}/>
+        <NavBar user={user} />
         <body>{children}</body>
       </body>
     </html>
