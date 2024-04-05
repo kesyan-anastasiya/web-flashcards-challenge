@@ -6,7 +6,10 @@ module.exports = function QuestionCard({ question }) {
       <h2>122131231231</h2>
       <img src={question.img} alt=""/>
       <h2>{question.description}</h2>
-      <input name="answer" type="text" placeholder="Введите ответ"/>
+      <input type='text' name='answer' placeholder='Введите ответ' required />
+      <button className='OKbut' type='submit'>
+        Ответить
+      </button>
     </div>
   );
 };
