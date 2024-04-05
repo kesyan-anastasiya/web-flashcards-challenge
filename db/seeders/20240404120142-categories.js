@@ -5,12 +5,12 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     const categoriesData = [
       {
-        title: "1",
-        img:"rrr",
+        title: "«Каверзные вопросы»",
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXskTUtIy13aT9H_DB2EXmvbGEo5lWdtSJTLFDH0cVvznabR8gfsRsDc8MxTP4KPyHaeE&usqp=CAU",
       },
       {
-        title: "2",
-        img:"yyy",
+        title: "Вопросы про Эльбрус",
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_GLVJn7w7OYnhNP5mh4cw8k1RpEGcHO6A9iPCQ_Tnw&sy",
       },
     ];
     const categories = categoriesData.map((category) => ({
