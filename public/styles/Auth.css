@@ -37,6 +37,7 @@
   
   button:hover {
     background-color: yellow;
+    cursor: pointer;
   }
   
   .error,
