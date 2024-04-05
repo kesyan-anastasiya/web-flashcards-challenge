@@ -1,38 +1,31 @@
-const React = require('react');
-const Layout = require('../Layout');
+const React = require("react");
+const Layout = require("../Layout");
 
 function RegPage() {
   return (
     <Layout>
-      <div className='container'>
-        <form className='sign-up'>
+      <div className="container">
+        <form className="sign-up">
+          <input name="name" className="regName" placeholder="Введите имя" />
           <input
-            name='name'
-            className='form-control'
-            id='exampleInputEmail1'
-            placeholder='Введите Имя'
+            name="email"
+            className="regEmail"
+            placeholder=" Введите email"
           />
           <input
-            name='email'
-            className='form-control'
-            id='exampleInputEmail'
-            placeholder=' Введите email'
+            name="password"
+            className="regPassword"
+            placeholder="Введите пароль"
           />
           <input
-            name='password'
-            className='form-control'
-            id='exampleInputPassword1'
-            placeholder='Введите пароль'
+            name="cpassword"
+            className="regCpassword"
+            placeholder="Повторите пароль"
           />
-          <input
-            name='password'
-            className='form-control'
-            id='exampleInputPassword2'
-            placeholder='Повторите пароль'
-          />
-          <button type='submit' className='btn btn-primary'>
+          <button type="submit" className="btn-primary">
             Зарегистрироваться
           </button>
+          <div className="error"></div>
         </form>
       </div>
     </Layout>

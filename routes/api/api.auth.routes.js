@@ -11,7 +11,7 @@ router.post("/log", async (req, res) => {
       return;
     }
     if (user.password !== password) {
-      res.json({ message: "Пароль не совпадает" });
+      res.json({ message: "Ошибка пароля" });
     } else {
       res.json({ message: "success" });
       res.app.locals.user = user;
@@ -28,7 +28,7 @@ router.post("/registration", async (req, res) => {
     const { name, email, password } = req.body;
     user = await User.findOne({ where: { email } });
     if (user) {
-      res.json({ message: "Такой челик уже есть!!!" });
+      res.json({ message: "Такой пользователь уже есть!!!" });
       return;
     }
     user = await User.create({ name, email, password, score: 0 });
