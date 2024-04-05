@@ -30,12 +30,13 @@ if (RegForm) {
   RegForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const {
-      name, email, password
+      name, email, password, cpassword
     } = e.target;
     if (
       name.value.trim() === ''
       || email.value.trim() === ''
       || password.value.trim() === ''
+      || cpassword.value.trim() === ''
     ) {
       alert('Не все поля заполнены!');
       return;
@@ -44,6 +45,7 @@ if (RegForm) {
       name: name.value,
       email: email.value,
       password: password.value,
+      cpassword: cpassword.value,
     };
     const res = await fetch('/api/auth/registration', {
       method: 'POST',
