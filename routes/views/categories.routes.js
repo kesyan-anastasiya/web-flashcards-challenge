@@ -23,22 +23,20 @@ router.get("/", async (req, res) => {
 router.get("/:id/question/:index", async (req, res) => {
   try {
     const { id, index } = req.params;
-    console.log(req.params);
     const { user } = res.app.locals;
     const userInDb = await User.findOne({ where: { id: user.id } });
     const questions = await Question.findAll({ where: { category_id: id } });
-    if(questions[+index]){
+    if (questions[+index]) {
       res.send(
         res.renderComponent(QuestionsPage, {
           question: questions[+index],
           user: userInDb,
-          index
+          index,
         })
       );
-    }else{
-      res.redirect('/categories')
+    } else {
+      res.redirect("/categories");
     }
-
   } catch ({ message }) {
     console.log(message);
     res.end();
