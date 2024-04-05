@@ -35,7 +35,7 @@ router.get("/:id/question/:index", async (req, res) => {
         })
       );
     } else {
-      res.redirect("/categories");
+      res.redirect("/final");
     }
   } catch ({ message }) {
     console.log(message);
