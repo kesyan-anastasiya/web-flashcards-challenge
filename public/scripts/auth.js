@@ -21,7 +21,7 @@ if (LogForm) {
     if (data.message === "success") {
       window.location.assign("/");
     } else {
-      alert(data.message);
+      document.querySelector('.error2').innerHTML = data.message;
     }
   });
 }
@@ -54,7 +54,7 @@ if (RegForm) {
     if (data.message === 'success') {
       window.location.assign('/');
     } else {
-      alert(data.message);
+      document.querySelector('.error').innerHTML = data.message;
     }
   });
 }

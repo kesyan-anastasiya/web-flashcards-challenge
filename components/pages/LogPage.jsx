@@ -5,29 +5,27 @@ function LogPage() {
   return (
     <Layout>
       <div className='container'>
-        <form className='sign-in'>
+        <form className='sign-in' >
           <input
             name='name'
-            className='form-control'
-            id='exampleInputEmail1'
-            placeholder='Введите имя'
+            className='logName'
+            placeholder ='Введите имя'
           />
           <input
             name='email'
-            className='form-control'
-            id='exampleInputEmail'
+            className='logEmail'
             placeholder=' Введите email'
           />
           <input
             name='password'
-            className='form-control'
-            id='exampleInputPassword1'
+            className='logPassword'
             placeholder='Введите пароль'
           />
-          <button type='submit' className='btn btn-primary'>
+          <button type='submit' className='btn-primary'>
             Авторизироваться
           </button>
         </form>
+        <div className="error2"></div>
       </div>
     </Layout>
   );
