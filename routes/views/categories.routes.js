@@ -1,28 +1,48 @@
 const router = require("express").Router();
 const CategoriesPage = require("../../components/pages/CategoriesPage");
-const QuestionsPage = require('../../components/pages/QuestionsPage')
-const { Category, User, Question} = require("../../db/models");
+const QuestionsPage = require("../../components/pages/QuestionsPage");
+const { Category, User, Question } = require("../../db/models");
 
 router.get("/", async (req, res) => {
   try {
     const { user } = res.app.locals;
-    const userInDb = await User.findOne({ where: { id: user.id } });
-    const quizzes = await Category.findAll();
-    res.send(res.renderComponent(CategoriesPage, { quizzes, user: userInDb }));
+    if (user) {
+      const userInDb = await User.findOne({ where: { id: user.id } });
+      const quizzes = await Category.findAll();
+      res.send(
+        res.renderComponent(CategoriesPage, { quizzes, user: userInDb })
+      );
+    } else {
+      res.redirect("/auth/registration");
+    }
   } catch ({ message }) {
     res.json({ error: message });
   }
 });
 
-router.get('/:id/question', async (req, res) => {
+router.get("/:id/question/:index", async (req, res) => {
+  try {
+    const { id, index } = req.params;
+    console.log(req.params);
     const { user } = res.app.locals;
-    try {
-      const { id } = req.params;
-      const userInDb = await User.findOne({where: {id: user.id}})
-      const question = await Question.findOne({ where: { category_id: id } });
-      res.send(res.renderComponent(QuestionsPage, { question, user: userInDb }));
-    } catch ({ message }) {
-      res.json({ error: message });
+    const userInDb = await User.findOne({ where: { id: user.id } });
+    const questions = await Question.findAll({ where: { category_id: id } });
+    if(questions[+index]){
+      res.send(
+        res.renderComponent(QuestionsPage, {
+          question: questions[+index],
+          user: userInDb,
+          index
+        })
+      );
+    }else{
+      res.redirect('/categories')
     }
-  });
+
+  } catch ({ message }) {
+    console.log(message);
+    res.end();
+  }
+});
+
 module.exports = router;

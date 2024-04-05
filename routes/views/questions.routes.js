@@ -1,14 +1,19 @@
 const router = require("express").Router();
-const { Question } = require('../../db/models');
-const QuestionsPage = require('../../components/pages/QuestionsPage');
+const { Question, User, Category } = require('../../db/models');
+// const QuestionsPage = require('../../components/pages/QuestionsPage');
 
-router.get("/", async (req, res) => {
-  try {
-    const question = await Question.findOne({ where: {id: 1} });
-    res.send(res.renderComponent(QuestionsPage, { question}));
-  } catch ({ message }) {
-    res.json({ message });
-  }
-});
+// router.get("/:qid", async (req, res) => {
+//   try {
+//     const { id, qid } = req.params;
+//     const { user } = res.app.locals;
+//     const userInDb = await User.findOne({ where: {id: user.id } });
+//     const question = await Question.findOne({ where: { category_id: id, id: question.qid }});
+//     res.send(res.renderComponent(QuestionsPage, { question }));
+//     res.app.locals.user = userInDb;
+//   } catch ({ message }) {
+//     res.json({ message });
+//     res.redirect('/finalPage');
+//   }
+// });
 
 module.exports = router;
