@@ -8,6 +8,7 @@ module.exports = function Layout({ title, children, user }) {
         <title>{title}</title>
         <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="/styles/Navbar.css" />
+        <link rel="stylesheet" href="/styles/Auth.css" />
         <script defer src='/scripts/auth.js' />
       </head>
       <body>
