@@ -13,6 +13,7 @@ module.exports = function QuestionCard({ question }) {
           Ответить
         </button>
       </form>
+      <div className="messageResponse"> </div>
     </div>
   );
 };

@@ -15,11 +15,13 @@ if (answerForm) {
             })
         })
         const data = await res.json()
+        const messageResponse = document.querySelector('.messageResponse')
         if (data.message === 'Ну каков умничка!!') {
-            answer.reset()
+            answerForm.reset()
+            console.log('-----------------')
             messageResponse.innerHTML = 'Умница! Мама с папой гордятся тобой!'
         } else {
-            answer.reset()
+            answerForm.reset()
             messageResponse.innerHTML = 'Не в этот раз, подумай еще'
         }
     })
