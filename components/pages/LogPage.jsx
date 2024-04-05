@@ -20,6 +20,7 @@ function LogPage() {
             name='password'
             className='logPassword'
             placeholder='Введите пароль'
+            type="password"
           />
           <button type='submit' className='btn-primary'>
             Авторизироваться

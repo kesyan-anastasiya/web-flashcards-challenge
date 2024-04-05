@@ -16,11 +16,13 @@ function RegPage() {
             name="password"
             className="regPassword"
             placeholder="Введите пароль"
+            type="password"
           />
           <input
             name="cpassword"
             className="regCpassword"
             placeholder="Повторите пароль"
+            type="password"
           />
           <button type="submit" className="btn-primary">
             Зарегистрироваться
